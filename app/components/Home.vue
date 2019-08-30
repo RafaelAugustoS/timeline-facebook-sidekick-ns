@@ -1,22 +1,17 @@
 <template>
     <Page class="page">
         <ActionBar class="action-bar">
-            <Label class="action-bar-title" text="Home"></Label>
+            <Label class="action-bar-title" text="Timeline"></Label>
         </ActionBar>
 
-        <GridLayout>
-            <Label class="info" horizontalAlignment="center" verticalAlignment="center">
-                <FormattedString>
-                    <Span class="fa" text.decode="&#xf135; "/>
-                    <Span :text="message"/>
-                </FormattedString>
-            </Label>
-        </GridLayout>
+        <Post />
     </Page>
 </template>
 
 <script>
+    import Post from './Post'
     export default {
+        components: { Post },
         computed: {
             message() {
                 return "Blank {N}-Vue app";
