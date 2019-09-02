@@ -4,31 +4,24 @@
             <Label class="action-bar-title" text="Timeline"></Label>
         </ActionBar>
 
-        <StackLayout>
-            <Post />
-            <Post />
-        </StackLayout>
+        <ScrollView>
+            <StackLayout>
+                <Post />
+                <Post />
+            </StackLayout>
+        </ScrollView>
     </Page>
 </template>
 
 <script>
     import Post from './Post'
     export default {
-        components: { Post },
-        computed: {
-            message() {
-                return "Blank {N}-Vue app";
-            }
-        }
+        components: { Post }
     };
 </script>
 
 <style scoped lang="scss">
-    // Start custom common variables
     @import '../app-variables';
-    // End custom common variables
-
-    // Custom styles
     .fa {
         color: $accent-dark;
     }
