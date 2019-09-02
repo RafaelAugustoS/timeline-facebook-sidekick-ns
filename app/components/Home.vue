@@ -4,7 +4,10 @@
             <Label class="action-bar-title" text="Timeline"></Label>
         </ActionBar>
 
-        <Post />
+        <StackLayout>
+            <Post />
+            <Post />
+        </StackLayout>
     </Page>
 </template>
 
@@ -32,5 +35,9 @@
 
     .info {
         font-size: 20;
+    }
+
+    .page{
+        background: #ccc;
     }
 </style>
